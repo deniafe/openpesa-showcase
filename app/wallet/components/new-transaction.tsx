@@ -38,7 +38,7 @@ export function NewTransaction() {
         <CardDescription>
           Total Balance
         </CardDescription>
-          <h2 className="text-3xl mt-4 text-gray-700">$120.480 </h2>
+          <h2 className="text-xl md:text-3xl mt-4 text-gray-700">$120.480 </h2>
         </div>
         
         <div className="flex space-x-2">
