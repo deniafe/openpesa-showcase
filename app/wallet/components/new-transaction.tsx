@@ -33,21 +33,21 @@ export function NewTransaction() {
   return (
     <>
      <Dialog open={showNewTeamDialog} onOpenChange={setShowNewTeamDialog}>
-      <div className="flex items-center justify-between space-y-16">
+      <div className="flex items-end justify-between space-y-16">
         <div>
         <CardDescription>
           Total Balance
         </CardDescription>
-          <h2 className="text-3xl text-gray-700">$120.480 </h2>
+          <h2 className="text-3xl mt-4 text-gray-700">$120.480 </h2>
         </div>
         
-        <div className="flex items-center space-x-2">
+        <div className="flex space-x-2">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
                 variant="outline"
                 // onClick={() => table.resetColumnFilters()}
-                className="h-8 px-2 lg:px-3"
+                className="h-8 px-2 mt--8 lg:px-3"
               >
                 <PlusCircledIcon className="mr-2 h-4 w-4" />
                 New Transaction

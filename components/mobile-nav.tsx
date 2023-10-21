@@ -55,7 +55,7 @@ export function MobileNav() {
             <DropdownMenuItem>
                Settings
             </DropdownMenuItem>
-          </Link><DropdownMenuItem>Settings</DropdownMenuItem>
+          </Link>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem>

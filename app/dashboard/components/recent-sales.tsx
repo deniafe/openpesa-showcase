@@ -48,17 +48,20 @@ export function RecentSales() {
   return (
     <div className="space-y-8">
       {salesData.map((sale, index) => (
-        <div className="flex items-center" key={index}>
-          <Avatar className={index === 0 ? "h-8 w-8" : "flex h-9 w-9 items-center justify-center space-y-0 border"}>
-            <AvatarImage src={sale.imgUrl} alt="Avatar" />
-            <AvatarFallback>{sale.avatarInitials}</AvatarFallback>
-          </Avatar>
-          <div className="ml-4 space-y-1">
-            <p className="text-sm font-medium leading-none">{sale.name}</p>
-            <p className="text-sm text-muted-foreground">{sale.email}</p>
+        <>
+          <div className="flex items-center" key={index}>
+            <Avatar className={index === 0 ? "h-8 w-8" : "flex h-9 w-9 items-center justify-center space-y-0 border"}>
+              <AvatarImage src={sale.imgUrl} alt="Avatar" />
+              <AvatarFallback>{sale.avatarInitials}</AvatarFallback>
+            </Avatar>
+            <div className="ml-4 space-y-1">
+              <p className="text-sm font-medium leading-none">{sale.name}</p>
+              <p className="text-sm text-muted-foreground">{sale.email}</p>
+            </div>
+            <div className="hidden md:block ml-auto font-medium">{sale.amount}</div>
           </div>
-          <div className="ml-auto font-medium">{sale.amount}</div>
-        </div>
+          <div className="md:hidden ml-auto font-medium">{sale.amount}</div>
+        </>
       ))}
     </div>
   )

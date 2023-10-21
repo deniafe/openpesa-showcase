@@ -21,7 +21,7 @@ export default function WalletPage() {
             </div> */}
           </div>
           <div className="flex pt-8" >
-            <div className="w-5/6 md:w-2/3">
+            <div className="w-full md:w-2/3">
               <ProfileForm />
             </div>
           </div>
