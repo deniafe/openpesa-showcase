@@ -129,15 +129,15 @@ export function Trade() {
           </CardContent>
           <CardFooter>
           <Button disabled={isLoading} type="submit" onClick={onSubmit}>
-             {isLoading ? (
-                <>
-                  <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
-                  Processing
-                </>
-              ) : (
-                'Sell Now'
-              )}
-            </Button>
+            {isLoading ? (
+              <>
+                <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+                Processing
+              </>
+            ) : (
+              'Sell Now'
+            )}
+          </Button>
           </CardFooter>
         </Card>
       </TabsContent>

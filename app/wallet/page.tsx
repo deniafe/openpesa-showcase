@@ -27,16 +27,16 @@ export default function WalletPage() {
           <NewTransaction />
           
           <Card className="md:col-span-3">
-              <CardHeader>
-                <CardTitle>Transaction History</CardTitle>
-                <CardDescription>
-                  You made 21 transactions this month.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <RecentTransactions />
-              </CardContent>
-            </Card>
+            <CardHeader>
+              <CardTitle>Transaction History</CardTitle>
+              <CardDescription>
+                You made 21 transactions this month.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <RecentTransactions />
+            </CardContent>
+          </Card>
          
         </div>
 

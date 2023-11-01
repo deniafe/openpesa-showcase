@@ -13,6 +13,8 @@ import { Overview } from "@/app/dashboard/components/overview"
 import { RecentSales } from "@/app/dashboard/components/recent-sales"
 import { Navbar } from "@/components/nav-bar"
 import { DownloadReport } from "@/components/download-report"
+import Exchange from "./components/exchange"
+import { RatesTable } from "./components/rates-table"
 
 export const metadata: Metadata = {
   title: "Dashboard",
@@ -29,7 +31,7 @@ export default function DashboardPage() {
             <h2 className="text-3xl text-blue-900 font-bold tracking-tight">Dashboard</h2>
             <div className="hidden md:flex items-center space-x-2">
               {/* <CalendarDateRangePicker /> */}
-              <DownloadReport />
+              {/* <DownloadReport /> */}
             </div>
           </div>
 
@@ -152,14 +154,27 @@ export default function DashboardPage() {
           </div>
 
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-7">
-            <Card className="md:col-span-4">
+            {/* <Card className="md:col-span-4">
               <CardHeader>
                 <CardTitle>Overview</CardTitle>
               </CardHeader>
               <CardContent className="pl-2">
                 <Overview />
               </CardContent>
+            </Card> */}
+            <div className="md:col-span-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Live Rates</CardTitle>
+                <CardDescription>
+                  Find people who are ready to buy or sell in different currencies
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+              <RatesTable />
+              </CardContent>
             </Card>
+            </div>
             <Card className="md:col-span-3">
               <CardHeader>
                 <CardTitle>Recent Currency Exchange</CardTitle>

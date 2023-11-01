@@ -12,6 +12,7 @@ import {
 import { TradeGraph } from "./components/trade-graph"
 import { Trade } from "./components/trade"
 import { Navbar } from "@/components/nav-bar"
+import { TradeTable } from "./components/trade-table"
 
 const cardsData = [
   {
@@ -68,7 +69,7 @@ export default function TradePage() {
         <Navbar />
         <div className="flex-1 space-y-4 p-8 pt-6">
           <div className="flex items-center justify-between space-y-2">
-            <h2 className="text-3xl text-blue-900 font-bold tracking-tight">Currency Excahnge</h2>
+            <h2 className="text-3xl text-blue-900 font-bold tracking-tight">Currency Exchange</h2>
             <div className="flex items-center space-x-2">
               {/* <CalendarDateRangePicker /> */}
               {/* <DownloadReport /> */}
@@ -108,14 +109,44 @@ export default function TradePage() {
               </CardHeader>
               <CardContent className="pl-2">
                 <TradeGraph />
+
+                <Card className="md:col-span-3 mt-20">
+                  <CardHeader>
+                    <CardTitle>NGN - Nigerian Naira</CardTitle>
+                  </CardHeader>
+                  <CardContent className="pl-2">
+                   The Nigerian naira (NGN) is the official currency of Nigeria. It is subdivided into 100 kobos. The Central Bank of Nigeria is the only bank with the authority to issue the legal currency. The symbol of the Nigerian naira is ₦.
+                  </CardContent>
+                </Card>
+
+                <Card className="md:col-span-3 mt-16">
+                  <CardHeader>
+                    <CardTitle>USD - US Dollar</CardTitle>
+                  </CardHeader>
+                  <CardContent className="pl-2">
+                   The US dollar (USD) is the official currency of the United States of America. It is the world’s most widely traded currency.
+                  </CardContent>
+                </Card>
+
               </CardContent>
             </Card>
-            <Card className="md:col-span-3">
+            {/* <Card className="md:col-span-3">
               <CardHeader>
                 <CardTitle>Buy And Sell Currency</CardTitle>
               </CardHeader>
               <CardContent>
                 <Trade />
+              </CardContent>
+            </Card> */}
+            <Card className="md:col-span-3">
+              <CardHeader>
+                <CardTitle>Traders</CardTitle>
+                <CardDescription>
+                  Find people who are ready to buy or sell in different currencies
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+              <TradeTable />
               </CardContent>
             </Card>
           </div>

@@ -16,7 +16,7 @@ import { useState } from "react"
 
 export default function AuthenticationPage() {
 
-  const [authState, setAuthState] = useState<string>('signup'); // Initialize state as 'signup'
+  const [authState, setAuthState] = useState<string>('login'); // Initialize state as 'signup'
 
   const toggleState = () => {
     // Toggle between 'signup' and 'login'
