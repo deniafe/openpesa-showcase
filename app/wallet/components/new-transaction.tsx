@@ -92,7 +92,9 @@ export function NewTransaction() {
         <div>
           <div className="space-y-4 py-2 pb-4">
             <div className="space-y-2">
-              <Label htmlFor="name">Amount in Naira (₦)</Label>
+              <Label htmlFor="name">
+              {transactionType === 'add' ? 'Amount in Naira (₦)' : 'Amount in Dollars ($)'}
+              </Label>
               <Input id="name" placeholder="10000" />
             </div>
             <div className="space-y-2">
