@@ -55,16 +55,20 @@ export const AuthContextProvider: React.FC<AuthContextProviderProps> = ({ childr
         return () => unsubscribe();
     }, []);
 
-    useEffect(() => {
-        if (user == null) router.push("/")
-      }, [user])
+    // useEffect(() => {
+    //     if (user == null) router.push("/")
+    //   }, [user])
 
-      useEffect(() => {
-        if (user &&  pathName === "/") {
-            console.log('There is a user, so I am routing to dashboard', pathName)
-            router.push("/dashboard"); // Replace "dashboard" with the actual route to your dashboard.
-        }
-    }, [user, pathName]);
+    //   useEffect(() => {
+    //     if (user &&  pathName === "/") {
+    //         console.log('There is a user, so I am routing to dashboard', pathName)
+    //         router.push("/dashboard"); // Replace "dashboard" with the actual route to your dashboard.
+    //     }
+    // }, [user, pathName]);
+
+    useEffect(() => {
+     router.push("/")
+    }, [])
     
 
     return (
